@@ -64,11 +64,6 @@ class _ItemListPageState extends State<ItemListPage> {
           return const CircularProgressIndicator();
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
