@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
-import 'classes/myHttpOverrides.dart';
-import 'pages/itemListPage.dart';
-import 'pages/itemCraftPage.dart';
+
+import 'pages/itemsList.dart';
 
 void main() {
-  HttpOverrides.global = MyHttpOverrides();
   runApp(const MyApp());
 }
 
@@ -22,9 +19,15 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/itemList',
       routes: {
-        '/itemList': (context) =>
-            const ItemListPage(title: 'Factorio Calculator'),
-        // '/itemCraft': (context) => const ItemCraftPage(title: 'Craft', itemName: '',),
+        '/itemList': (context) => const ItemsList(title: 'Factorio Calculator'),
+        // '/itemCraft': (context) => const ItemCraft(title: 'Craft', itemName: itemName),
+        // '/itemResources': (context) => const ItemResources(title: 'Resources'),
+        // '/itemDetailedCraft': (context) =>
+        //     const ItemDetailedCraft(title: 'Detailed Craft'),
+        // '/itemCraft': (context) => const ItemCraftPage(
+        //       title: 'Craft',
+        //       itemName: '',
+        //     ),
       },
     );
   }
